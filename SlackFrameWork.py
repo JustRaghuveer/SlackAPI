@@ -5,7 +5,7 @@ import xlrd
 import xlwt
 
 
-Slack_workbook = xlrd.open_workbook("C:\\Users\\rhebbar\\Desktop\\Slack_Input.xlsx")  # input file path goes here
+Slack_workbook = xlrd.open_workbook("Slack_Input.xlsx")  # input file path goes here
 #
 slack_wbk = xlwt.Workbook()
 slack_createAPI = slack_wbk.add_sheet("CreateAPI_Result", cell_overwrite_ok=True)
@@ -67,7 +67,7 @@ def CreateAPI():
             print("Test step is set to No")
             pass
 
-    slack_wbk.save("C:\\Users\\rhebbar\\Desktop\\slackAPI_Results.xls")
+    slack_wbk.save("slackAPI_Results.xls")
 
 def JoinAPI():
     url = slack_Join_API.cell_value(1, 1)
@@ -88,7 +88,7 @@ def JoinAPI():
 
             print(result)
 
-    slack_wbk.save("C:\\Users\\rhebbar\\Desktop\\slackAPI_Results.xls")
+    slack_wbk.save("slackAPI_Results.xls")
 
 
 def RenameAPI():
